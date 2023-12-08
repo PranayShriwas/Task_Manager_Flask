@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ action }} Task{% endblock %}
+
+{% block content %}
+    <h1>{{ action }} Task</h1>
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <label for="title">Title:</label>
+        {{ form.title(class="form-control") }}
+        <label for="description">Description:</label>
+        {{ form.description(class="form-control") }}
+        <label for="due_date">Due Date:</label>
+        {{ form.due_date(class="form-control") }}
+        <label for="status">Status:</label>
+        {{ form.status(class="form-control")
